@@ -2,14 +2,14 @@ import numpy as np
 import os
 import cv2
 from matplotlib import pyplot as plt
-image_path = 'D:\jaemin\Study\deeplearning\image_classification\cat\cat (1).jpg'
+image_path = 'C:/Users/iceba/develop/deeplearning/code/image_classification/animals/cat/cat (1).jpg'
 img = cv2.imread(image_path)
-
+plt.imshow(img)
+plt.show()
 b, g, r = cv2.split(img)   # img파일을 b,g,r로 분리
 cv2.imwrite('blue.jpg', b)
 cv2.imwrite('green.jpg', g)
 cv2.imwrite('red.jpg', r)
-
 img2 = cv2.merge([r,g,b]) # b, r을 바꿔서 Merge
 
 plt.imshow(img2)
